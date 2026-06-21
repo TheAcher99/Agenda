@@ -1,17 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-
-export const supabase = createClient(supabaseUrl, supabaseKey, {
-  auth: {
-    persistSession: false,
-    autoRefreshToken: false,
-  },
-  global: {
-    headers: {
-      'apikey': supabaseKey,
-      'Authorization': `Bearer ${supabaseKey}`,
-    }
-  }
-})
+export const supabase = createClient(
+  'https://cxmvzuaaqgbmiueeSgkx.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4bXZ6dWFhcWdibWl1ZWVzZ2t4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIwMjc5NDQsImV4cCI6MjA5NzYwMzk0NH0.2vygd2igDfdnhG3c_hLC1ZXfTbfQy-BxRt7YzO9PVDo'
+)
