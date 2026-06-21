@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: #0d1b3e; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+.lined-bg {
+  background: repeating-linear-gradient(
+    to bottom,
+    #f5eecc 0px,
+    #f5eecc 40px,
+    #c8b870 40px,
+    #c8b870 41px
+  );
+}
